@@ -2,6 +2,7 @@
 ### type: debug
 ### note:
 - test release-2/1.0.0
+- update test round 2
 
 ## version: 1.0.0
 ### type: debug
