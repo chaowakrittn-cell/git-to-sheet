@@ -36,7 +36,7 @@ jobs:
               --arg token "$TOKEN" --arg repo "$REPO" --arg branch "$BRANCH" \
               --arg author "$AUTHOR" --arg commit "$COMMIT" \
               '{token:$token, repo:$repo, branch:$branch, author:$author, commit:$commit}' \
-            | curl -sSL -X POST -H "Content-Type: application/json" -d @- "$SHEET_URL")
+            | curl -sSL -H "Content-Type: application/json" -d @- "$SHEET_URL")
           echo "Response: $RESPONSE"
           # Fail the job if the script reports an error
           [[ "$RESPONSE" == ok* || "$RESPONSE" == skipped* ]]
